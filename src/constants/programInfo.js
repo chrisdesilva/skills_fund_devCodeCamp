@@ -49,7 +49,7 @@ export const schoolInfo = {
 
 export const faq = {
 	// faq section
-	costOfLiving: false, // true if at least one program has cost of living included
+	costOfLiving: true, // true if at least one program has cost of living included
 	costOfLivingPrograms: '', // leave as empty string is cost of living availability is the same across all programs
 	multCostOfLivingPrograms: false, // true if costOfLivingPrograms string has more than one program
 	interestOnly: true, // true if interest-only payments are an option
@@ -75,8 +75,8 @@ export const faq = {
 		{
 			programName: 'devCodeCamp',
 			maxAmount: '$17,800',
-			col: false,
-			colAmount: '$6,000'
+			col: true,
+			colAmount: '$7,500'
 		}
 	]
 };
@@ -138,7 +138,7 @@ export const programLoanInfo = [
 		url: 'https://my.skills.fund/application?lenderCode=SADCC17',
 		loanInfo: {
 			// match loanInfo in first metro below
-			maxLoanAmt: 17800,
+			maxLoanAmt: 25300,
 			loanTerm36: true,
 			loanTerm60: true,
 			'0': {
@@ -159,7 +159,7 @@ export const programLoanInfo = [
 				location: 'Metro 1',
 				loanInfo: {
 					// // match loanInfo to Program 1 above
-					maxLoanAmt: 17800,
+					maxLoanAmt: 25300,
 					loanTerm36: true,
 					loanTerm60: true,
 					'0': {
@@ -332,7 +332,7 @@ export const programLoanInfo = [
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
 export const programMaxText =
-	"Choose the loan amount that works best for you. Borrow up to $17,800 for devCodeCamp's Full-Time Bootcamp tuition.";
+	"Choose the loan amount that works best for you. Borrow up to $17,800 for devCodeCamp's Full-Time Bootcamp tuition and up to $7,500 for cost of living.";
 
 export const paymentTable = {
 	headers: [ 'Program', 'Tuition', 'Cost of Living', 'Max Total' ],
