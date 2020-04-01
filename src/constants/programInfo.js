@@ -56,7 +56,7 @@ export const faq = {
   immediateRepayment: false, // true if immediate repayment is an option
   multipleLoanLengths: true, // true if 36 and 60 month options are both available
   multipleLoanTypes: false, // true if both IR and IO are available
-  multiPrograms: false, // only true if there are multiple programs
+  multiPrograms: true, // only true if there are multiple programs
   onlinePrograms: false, // true if at least one program is remote/online
   schoolHQState: "WA",
   origFee: 0.04,
@@ -73,10 +73,16 @@ export const faq = {
   // max loan amounts by program for faq1
   loanRange: [
     {
-      programName: "devCodeCamp",
+      programName: "Software Development Bootcamp",
       maxAmount: "$17,800",
       col: true,
       colAmount: "$4,500",
+    },
+    {
+      programName: "Fullstack Web Development",
+      maxAmount: "$10,000",
+      col: true,
+      colAmount: "$3,500",
     },
   ],
 }
@@ -106,7 +112,8 @@ export const threeStepCardText = {
   step1: "",
   step2: {
     header: "select your program",
-    text: "devCodeCamp focuses exclusively on its full-time coding bootcamp.",
+    text:
+      "Choose between devCodeCamp's Software Development Bootcamp or Fullstack Web Development program.",
   },
   step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`,
 }
@@ -115,9 +122,9 @@ export const netlifyFormName = "devcodecamp_contact"
 
 export const GATracking = "UA-68312423-1"
 
-export const hubspotFormId = "11f5a23f-46fe-48ea-9b80-b209d39fc519" // create Hubspot form, get form id after publishing
+export const hubspotFormId = "dbdd8326-2399-44ea-a998-4d0f99914f8c" // create Hubspot form, get form id after publishing
 
-export const selectAProgram = "program_name" // update school name to match form field on Hubspot, *** change to "program_name" if only one program ***"
+export const selectAProgram = "select_a_devcodecamp_program" // update school name to match form field on Hubspot, *** change to "program_name" if only one program ***"
 
 // ***** END GENERAL SCHOOL INFO *****
 
@@ -134,7 +141,7 @@ export const moreThanSixPrograms = false // set to true if there are 7 or more p
 export const programLoanInfo = [
   // update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
   {
-    name: "Full-Time Bootcamp",
+    name: "Software Development Bootcamp",
     url: "https://my.skills.fund/application?lenderCode=SADCC17",
     loanInfo: {
       // match loanInfo in first metro below
@@ -201,17 +208,17 @@ export const programLoanInfo = [
     ],
   },
   {
-    name: "Program 2",
-    url: "https://my.skills.fund/application?lenderCode=LENDERCODE2",
+    name: "Fullstack Web Development",
+    url: "https://my.skills.fund/application?lenderCode=SFDCCFWD19",
     loanInfo: {
       // match loanInfo in first metro below
-      maxLoanAmt: 10995,
+      maxLoanAmt: 13500,
       loanTerm36: true,
       loanTerm60: true,
       "0": {
         k: 5,
-        apr36: 11.16,
-        apr60: 12.51,
+        apr36: 11.67,
+        apr60: 12.99,
       },
       "1": null,
     },
@@ -224,13 +231,13 @@ export const programLoanInfo = [
         location: "Metro 1",
         loanInfo: {
           // match loanInfo to Program 2 loanInfo above
-          maxLoanAmt: 10995,
+          maxLoanAmt: 13500,
           loanTerm36: true,
           loanTerm60: true,
           "0": {
             k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
+            apr36: 11.67,
+            apr60: 12.99,
           },
           "1": null,
         },
@@ -251,88 +258,11 @@ export const programLoanInfo = [
       },
     ],
   },
-  {
-    name: "Program 3",
-    url: "https://my.skills.fund/application?lenderCode=LENDERCODE3",
-    loanInfo: {
-      // match loanInfo in first metro below
-      maxLoanAmt: 15995,
-      loanTerm36: true,
-      loanTerm60: true,
-      "0": {
-        k: 5,
-        apr36: 11.16,
-        apr60: 12.51,
-      },
-      "1": {
-        apr36: 11.25,
-        apr60: 12.55,
-      },
-    },
-    defaultLoanType: "0", // leave at 0 for interest-only, set to 1 for immediate repayment
-    showMetros: false,
-    showLoanTypes: false,
-    locations: ["Metro A", "Metro B", "Metro C"],
-    metros: [
-      {
-        location: "Metro A",
-        loanInfo: {
-          // match loanInfo to Program 3 loanInfo above
-          maxLoanAmt: 15995,
-          loanTerm36: true,
-          loanTerm60: true,
-          "0": {
-            k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
-          },
-          "1": {
-            apr36: 11.25,
-            apr60: 12.55,
-          },
-        },
-      },
-      {
-        location: "Metro B",
-        loanInfo: {
-          maxLoanAmt: 15545,
-          loanTerm36: true,
-          loanTerm60: true,
-          "0": {
-            k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
-          },
-          "1": {
-            apr36: 11.25,
-            apr60: 12.55,
-          },
-        },
-      },
-      {
-        location: "Metro C",
-        loanInfo: {
-          maxLoanAmt: 20545,
-          loanTerm36: true,
-          loanTerm60: true,
-          "0": {
-            k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
-          },
-          "1": {
-            apr36: 11.25,
-            apr60: 12.55,
-          },
-        },
-      },
-    ],
-  },
 ]
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
 export const programMaxText =
-  "Choose the loan amount that works best for you. Borrow up to $17,800 for devCodeCamp's Full-Time Bootcamp tuition and up to $4,500 for cost of living."
+  "Choose the loan amount that works best for you. Borrow up to $17,800 for devCodeCamp's Software Development Bootcamp tuition and up to $4,500 for cost of living or up to $10,000 for the Fullstack Web Development program tuition and up to $3,500 for cost of living."
 
 export const paymentTable = {
   headers: ["Program", "Tuition", "Cost of Living", "Max Total"],
