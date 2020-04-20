@@ -59,7 +59,7 @@ export const faq = {
   multiPrograms: true, // only true if there are multiple programs
   onlinePrograms: false, // true if at least one program is remote/online
   schoolHQState: "WA",
-  origFee: 0.04,
+  origFee: 0.05,
 
   // interest payment FAQ info
   exampleLoanAmount: "$10,000",
@@ -80,9 +80,9 @@ export const faq = {
     },
     {
       programName: "Fullstack Web Development",
-      maxAmount: "$10,000",
+      maxAmount: "$15,800",
       col: true,
-      colAmount: "$3,500",
+      colAmount: "$4,500",
     },
   ],
 }
@@ -213,7 +213,7 @@ export const programLoanInfo = [
     url: "https://my.skills.fund/application?lenderCode=SFDCCFWD19",
     loanInfo: {
       // match loanInfo in first metro below
-      maxLoanAmt: 13500,
+      maxLoanAmt: 20300,
       loanTerm36: true,
       loanTerm60: true,
       "Interest Only": {
@@ -233,7 +233,7 @@ export const programLoanInfo = [
         location: "Metro 1",
         loanInfo: {
           // match loanInfo to Program 2 loanInfo above
-          maxLoanAmt: 13500,
+          maxLoanAmt: 20300,
           loanTerm36: true,
           loanTerm60: true,
           "Interest Only": {
