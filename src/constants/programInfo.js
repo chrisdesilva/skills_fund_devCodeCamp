@@ -109,7 +109,7 @@ export const previewText = {
 
 export const faq = {
   // faq section
-  costOfLiving: true, // true if at least one program has cost of living included
+  costOfLiving: false, // true if at least one program has cost of living included
   costOfLivingPrograms: "", // leave as empty string is cost of living availability is the same across all programs
   multCostOfLivingPrograms: false, // true if costOfLivingPrograms string has more than one program
   interestOnly: true, // true if interest-only payments are an option
@@ -135,13 +135,13 @@ export const faq = {
     {
       programName: "Software Development Bootcamp",
       maxAmount: "$17,800",
-      col: true,
+      col: false,
       colAmount: "$4,500",
     },
     {
       programName: "Fullstack Web Development",
       maxAmount: "$15,800",
-      col: true,
+      col: false,
       colAmount: "$4,500",
     },
   ],
