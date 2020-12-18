@@ -134,13 +134,13 @@ export const faq = {
   loanRange: [
     {
       programName: "Software Development Bootcamp",
-      maxAmount: "$17,800",
+      maxAmount: "$15,500",
       col: false,
       colAmount: "$4,500",
     },
     {
       programName: "Fullstack Web Development",
-      maxAmount: "$15,800",
+      maxAmount: "$15,500",
       col: false,
       colAmount: "$4,500",
     },
